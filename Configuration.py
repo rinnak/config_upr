@@ -57,13 +57,13 @@ def execute_cd(tokens):
         return
     if len(tokens) > 1:
         if tokens[1] == "-":
-            print("Команда cd выполнена. Переход в предыдущую директорию")
+            print("Переход в предыдущую директорию")
         elif tokens[1] == "~":
-            print("Команда cd выполнена. Переход в домашнюю директорию")
+            print("Переход в домашнюю директорию")
         else:
-            print(f"Команда cd выполнена. Переход в директорию: {tokens[1]}")
+            print(f"Переход в директорию: {tokens[1]}")
     else:
-        print("Команда cd выполнена. Переход в домашнюю директорию")
+        print("Переход в домашнюю директорию")
 
 def run(script_mode = False, script_lines = None):
     print("Эмулятор командной строки UNIX")
@@ -95,6 +95,7 @@ def run(script_mode = False, script_lines = None):
             execute_ls(parsed_tokens)
         elif command == "cd":
             execute_cd(parsed_tokens)
+
         else:
             print(f"Ошибка: неизвестная команда '{command}'")
             print("Введите 'help' для списка команд")
@@ -115,10 +116,10 @@ def run_startup_script(script_path):
                 cleaned_line = line.strip() #без пробелов в начале и в конце
                 if not cleaned_line or cleaned_line.startswith('#'):
                     continue
-                print(f"Выполняется команда: {cleaned_line}")
                 tokens = split_command(cleaned_line)
                 parsed_tokens = [parse(token) for token in tokens]
                 command = parsed_tokens[0]
+                print(f"mvfs $ {line}")
                 if command == "exit":
                     print("Выход из скрипта")
                     break
