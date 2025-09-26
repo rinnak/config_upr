@@ -1,0 +1,4 @@
+ls
+invalid_command_that_should_fail
+cd /home
+help
