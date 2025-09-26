@@ -119,7 +119,7 @@ def run_startup_script(script_path):
                 tokens = split_command(cleaned_line)
                 parsed_tokens = [parse(token) for token in tokens]
                 command = parsed_tokens[0]
-                print(f"mvfs $ {line}")
+                print(f"mvfs $ {cleaned_line}")
                 if command == "exit":
                     print("Выход из скрипта")
                     break
@@ -127,6 +127,14 @@ def run_startup_script(script_path):
                     execute_ls(parsed_tokens)
                 elif command == "cd":
                     execute_cd(parsed_tokens)
+                elif command == "help":
+                    print("Доступные команды:")
+                    print("  ls [аргументы]  - список файлов")
+                    print("  cd [директория] - смена директории")
+                    print("  exit            - выход из программы")
+                    print("  help            - показать справку")
+                elif command == "exit":
+                    print("Выход из скрипта")
                 else:
                     print(f"Ошибка: неизвестная команда {command}")
     except FileNotFoundError:
