@@ -1,0 +1,54 @@
+ls
+clear
+
+rev "Hello World"
+rev "12345"
+rev "Python"
+rev "A B C D E"
+
+rev
+rev "first" "second"
+
+cd /level1/level2/level3
+cat deep_file.txt
+tac deep_file.txt
+
+cd /config/app/settings
+cat config.txt
+tac config.txt
+
+tac
+tac file1 file2
+tac /nonexistent.txt
+tac /level1
+
+ls
+ls /
+ls /level1
+ls /config
+ls /config/app
+ls /nonexistent
+
+cd /level1
+ls
+cd /level1/level2
+ls
+cd /level1/level2level3
+ls
+cd -
+ls
+cd /
+ls
+cd /config/app/settings
+ls
+cd ../..
+ls
+
+cd /level1/level2/level3
+
+vfs-init
+ls
+cd /home/user
+ls
+cat README.txt
+tac README.txt
