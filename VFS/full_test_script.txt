@@ -1,0 +1,71 @@
+
+ls
+ls /
+ls /level1
+ls /config/app
+
+
+cd level1
+ls
+cd level2
+ls  
+cd level3
+ls
+cat deep_file.txt
+cd -
+ls
+cd -
+ls
+cd ~
+ls
+cd /config/app/settings
+ls
+cd /
+ls
+
+
+cat /level1/level2/level3/deep_file.txt
+cat /config/app/settings/config.txt
+
+
+cd /nonexistent
+cd /level1/level2/level3/deep_file.txt
+cd /level1/invalid_folder
+
+
+cat /nonexistent.txt
+cat /level1
+cat 
+
+
+vfs-init
+ls /
+ls
+
+
+cd /home/user
+ls
+cat README.txt
+cd documents
+ls
+cd /
+ls
+
+
+cd .
+ls
+cd ..
+ls
+cd ../..
+ls
+cd home/../home/user/./documents
+ls
+cd /
+
+
+ls /home/user
+ls /home
+ls /
+
+
+exit

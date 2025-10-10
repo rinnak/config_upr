@@ -1,0 +1,10 @@
+path,is_directory,content
+/,True,
+/level1,True,
+/level1/level2,True,
+/level1/level2/level3,True,
+/level1/level2/level3/deep_file.txt,False,This is deep file
+/config,True,
+/config/app,True,
+/config/app/settings,True,
+/config/app/settings/config.txt,False,app_config
