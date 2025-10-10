@@ -1,0 +1,72 @@
+ls /
+chown user /level1
+chown admin /config
+chown developer /level1/level2/level3/deep_file.txt
+chown tester /config/app/settings/config.txt
+
+chown
+chown user
+chown user file1 file2 file3
+chown user /nonexistent_path
+chown user /level1/invalid_file
+
+ls /
+cp /level1/level2/level3/deep_file.txt /deep_file_copy.txt
+ls /
+cat /deep_file_copy.txt
+
+cp /config/app/settings/config.txt /config_backup.txt
+ls /
+cat /config_backup.txt
+
+cp /level1/level2/level3/deep_file.txt /config/app/settings/deep_backup.txt
+ls /config/app/settings
+cat /config/app/settings/deep_backup.txt
+
+cp /config/app/settings/config.txt /level1/config_copy.txt
+ls /level1
+cat /level1/config_copy.txt
+
+cp
+cp /level1/level2/level3/deep_file.txt
+cp file1 file2 file3
+cp /nonexistent.txt /copy.txt
+cp /level1 /invalid_target
+cp /level1/level2/level3/deep_file.txt /deep_file_copy.txt
+
+ls /
+cp /level1 /level1_backup
+ls /
+ls /level1_backup
+ls /level1_backup/level2
+ls /level1_backup/level2/level3
+cat /level1_backup/level2/level3/deep_file.txt
+
+cp /config /config_backup
+ls /config_backup
+ls /config_backup/app
+ls /config_backup/app/settings
+cat /config_backup/app/settings/config.txt
+
+chown backup_user /level1_backup
+chown webadmin /config_backup
+cp /level1_backup /final_backup
+chown final_owner /final_backup
+
+stat
+vfs-init
+stat
+ls /
+cp /home/user/README.txt /README_backup.txt
+ls /
+cat /README_backup.txt
+chown newuser /README_backup.txt
+
+cd /home/user/documents
+ls
+cd /home/user
+cp README.txt documents/readme_copy.txt
+ls documents
+cat documents/readme_copy.txt
+chown document_owner documents/readme_copy.txt
+exit
