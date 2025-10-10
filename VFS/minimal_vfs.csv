@@ -1,0 +1,6 @@
+path,is_directory,content
+/,True,
+/home,True,
+/home/user,True,
+/home/user/documents,True,
+/home/user/README.txt,False,base64:SGVsbG8gV29ybGQ=
